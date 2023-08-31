@@ -4,7 +4,7 @@ console.log(import.meta.env.ENVIRONMENT);
 
 // change baseURL to localhost:3000 for local development
 const axiosParams = {
-  baseURL: 'http://54.179.202.186:3000/',
+  baseURL: 'https://64f04ab68a8b66ecf7796818.mockapi.io/api/',
 };
 
 const axiosInstance: AxiosInstance = axios.create(axiosParams);
