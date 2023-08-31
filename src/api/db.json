@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "image": "https://bizweb.dktcdn.net/100/415/697/products/1-a76844f8-43b5-4ba4-8f94-08ff2f36394a.jpg?v=1657108723990",
+      "name": "Johnson & Johnson",
+      "brand": {
+        "name": "Arlene Wilson",
+        "image": "https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+      },
+      "quantity": 3064,
+      "price": 300,
+      "status": "sold_out",
+      "type": "clothes",
+      "id": 2
+    },
+    {
+      "image": "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-graceful-pm--M43701_PM2_Front%20view.jpg",
+      "name": "Louis Vuitton 1",
+      "brand": {
+        "name": "Bravo",
+        "image": "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-graceful-pm--M43701_PM2_Front%20view.jpg"
+      },
+      "quantity": "1234",
+      "price": 123,
+      "status": "available",
+      "type": "clothes",
+      "id": 5
+    },
+    {
+      "image": "https://bizweb.dktcdn.net/100/415/697/products/1-af0c84b6-d733-4bef-8dcf-d8a7d6bc30b8.jpg?v=1656673697867",
+      "name": "Polo Local Brand",
+      "brand": {
+        "name": "Local Brand",
+        "image": "https://hotgirlshop.vn/uploads/picture/21032022/News/2032113516-ao-tommy-nu-chinh-hang.jpg"
+      },
+      "quantity": "100",
+      "price": 20,
+      "status": "sold_out",
+      "type": "ring",
+      "id": 6
+    },
+    {
+      "image": "https://salt.tikicdn.com/ts/product/aa/fc/43/148d5d1822496b8534ed39f7d53e31d1.jpg",
+      "name": "Jean 2",
+      "brand": {
+        "name": "Local Brand",
+        "image": "https://tiki.vn/blog/wp-content/uploads/2023/02/cach-phoi-do-voi-quan-jeans-ong-rong.jpg"
+      },
+      "quantity": "900",
+      "price": 90,
+      "status": "sold_out",
+      "type": "clothes",
+      "id": 7
+    },
+    {
+      "image": "https://cdn2.yame.vn/pimg/quan-short-thun-y2010-h01-0019817/71cb2899-71a0-0100-2747-00180f6e62fc.jpg?w=540&h=756",
+      "name": "Short",
+      "brand": {
+        "name": "Mini Zury",
+        "image": "https://laforce.vn/wp-content/uploads/2022/11/cach-phoi-do-voi-quan-jean-ong-rong-nam.jpg"
+      },
+      "quantity": "193",
+      "price": 200,
+      "status": "sold_out",
+      "type": "clothes",
+      "id": 8
+    },
+    {
+      "image": "https://product.hstatic.net/1000360022/product/091a3103-min_795191f33e8842589b2b38ffcec7260b_large.jpg",
+      "name": "T Shirt",
+      "brand": {
+        "name": "Local Brand",
+        "image": "https://cdn3.dhht.vn/wp-content/uploads/2020/12/10-thuong-hieu-local-brand-viet-nam-duoc-su-dung-nhieu-nhat.jpg"
+      },
+      "quantity": "232",
+      "price": 100,
+      "status": "available",
+      "type": "shoes",
+      "id": 9
+    }
+  ]
+}

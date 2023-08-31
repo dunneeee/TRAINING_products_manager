@@ -1,27 +1,30 @@
-# React + TypeScript + Vite
+# Practice React Typescript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Introduce
 
-Currently, two official plugins are available:
+- The target reactjs practice project helps to know how to analyze UX/UI, project structure and configure the tools a project needs.
+- Design. [Here](https://www.figma.com/file/CpvRbyCmc4sjK14jg2UBWO/Products-Management?type=design&node-id=0-1&mode=design&t=vMJtUS46cxSmi5aV-0)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Timeline
 
-## Expanding the ESLint configuration
+- 4 days: 27/08-31/08/2023
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Technical Stacks
 
-- Configure the top-level `parserOptions` property like this:
+- Vite
+- Reactjs
+- Tailwindcss
+- React Router Dom
+- Json Server
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+### Run
+
+- Default host: http:localhost:5173
+
+```bash
+git clone https://github.com/dunneeee/TRAINING_products_manager.git
+cd TRAINING_products_manager
+npm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Change `baseURL` in `src/api/api.ts` files then run `npm run dev` to start project
