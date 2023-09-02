@@ -11,7 +11,7 @@
       "price": 300,
       "status": "sold_out",
       "type": "clothes",
-      "id": 2
+      "id": "2"
     },
     {
       "image": "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-graceful-pm--M43701_PM2_Front%20view.jpg",
@@ -24,7 +24,7 @@
       "price": 123,
       "status": "available",
       "type": "clothes",
-      "id": 5
+      "id": "5"
     },
     {
       "image": "https://bizweb.dktcdn.net/100/415/697/products/1-af0c84b6-d733-4bef-8dcf-d8a7d6bc30b8.jpg?v=1656673697867",
@@ -37,7 +37,7 @@
       "price": 20,
       "status": "sold_out",
       "type": "ring",
-      "id": 6
+      "id": "6"
     },
     {
       "image": "https://salt.tikicdn.com/ts/product/aa/fc/43/148d5d1822496b8534ed39f7d53e31d1.jpg",
@@ -50,7 +50,7 @@
       "price": 90,
       "status": "sold_out",
       "type": "clothes",
-      "id": 7
+      "id": "7"
     },
     {
       "image": "https://cdn2.yame.vn/pimg/quan-short-thun-y2010-h01-0019817/71cb2899-71a0-0100-2747-00180f6e62fc.jpg?w=540&h=756",
@@ -63,20 +63,33 @@
       "price": 200,
       "status": "sold_out",
       "type": "clothes",
-      "id": 8
+      "id": "8"
     },
     {
       "image": "https://product.hstatic.net/1000360022/product/091a3103-min_795191f33e8842589b2b38ffcec7260b_large.jpg",
-      "name": "T Shirt",
+      "name": "hihi",
       "brand": {
-        "name": "Local Brand",
-        "image": "https://cdn3.dhht.vn/wp-content/uploads/2020/12/10-thuong-hieu-local-brand-viet-nam-duoc-su-dung-nhieu-nhat.jpg"
+        "name": "haha",
+        "image": "https://product.hstatic.net/1000360022/product/091a3103-min_795191f33e8842589b2b38ffcec7260b_large.jpg"
       },
-      "quantity": "232",
-      "price": 100,
+      "quantity": "2",
+      "price": 2,
       "status": "available",
       "type": "shoes",
-      "id": 9
+      "id": "9"
+    },
+    {
+      "image": "https://product.hstatic.net/1000360022/product/091a3103-min_795191f33e8842589b2b38ffcec7260b_large.jpg",
+      "name": "hihi",
+      "brand": {
+        "name": "haha",
+        "image": "https://product.hstatic.net/1000360022/product/091a3103-min_795191f33e8842589b2b38ffcec7260b_large.jpg"
+      },
+      "quantity": "2",
+      "price": 2,
+      "status": "available",
+      "type": "shoes",
+      "id": "o-qYLpS"
     }
   ]
 }

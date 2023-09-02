@@ -1,6 +1,7 @@
-import { Button, Modal } from '@/components';
-import { Icons } from '@/constants';
 import { ProductTypes } from '@/types';
+import { Icons } from '@/constants';
+import { Button, Modal } from '@/components';
+
 import { ProductForm } from '.';
 
 type ProductFormModalProps = {

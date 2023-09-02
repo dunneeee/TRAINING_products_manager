@@ -1,5 +1,6 @@
-import { ProductTypes } from '@/types';
 import { useState } from 'react';
+
+import { ProductTypes } from '@/types';
 
 type Sort = 'asc' | 'desc';
 

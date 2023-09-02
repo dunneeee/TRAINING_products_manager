@@ -17,7 +17,7 @@ export const validateFormRules: ValidateRules<ProductFormValues> = [
     validate: (value) => {
       value = value + '';
       if (!value) return 'Image is required';
-      const isUrlEndWithImage = /(?:jpg|gif|png|jpeg)/g;
+      const isUrlEndWithImage = /^(https?:\/\/.*\.(?:jpg|jpeg|png|gif|webp))$/g;
 
       const isUrl = isUrlEndWithImage.test(value);
       if (!isUrl) return 'Image must be a valid url';

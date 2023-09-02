@@ -1,8 +1,8 @@
-import { AvatarText } from '..';
-import { Price } from './Price';
-import { Quantity } from './Quantity';
-import { Status } from './Status';
 import { Type } from './Type';
+import { Price } from './Price';
+import { AvatarText } from '..';
+import { Status } from './Status';
+import { Quantity } from './Quantity';
 
 type ProductProps = React.HTMLAttributes<HTMLDivElement> & {
   image: string;

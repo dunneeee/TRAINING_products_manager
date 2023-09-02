@@ -1,10 +1,12 @@
+import { useCallback, useEffect, useMemo, useState } from 'react';
+
 import { Button } from '@/components';
-import { ProductFormModal, ProductsTable } from '../components';
-import { useGlobalNotification, useToggle } from '@/hooks';
-import { useEffect, useState } from 'react';
 import { ProductTypes } from '@/types';
-import { useCreateProduct, useDeleteProduct, useFeatchProducts } from '../api';
+import { useGlobalNotification, useToggle } from '@/hooks';
+
 import { useUpdateProduct } from '../api/updateProduct';
+import { ProductFormModal, ProductsTable } from '../components';
+import { useCreateProduct, useDeleteProduct, useFeatchProducts } from '../api';
 
 export const Products = () => {
   const { showNotification } = useGlobalNotification();
@@ -38,12 +40,13 @@ export const Products = () => {
     openForm();
   };
 
-  const handleEditBtnClick = (product: ProductTypes.Instance) => {
+  const handleEditBtnClick = useCallback((product: ProductTypes.Instance) => {
     setProductEdit(product);
     openForm();
-  };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const handleDeleteProduct = (product: ProductTypes.Instance) => {
+  const handleDeleteProduct = useCallback((product: ProductTypes.Instance) => {
     showNotification({
       message: 'Are you sure you want to delete this product?',
       title: 'Delete product',
@@ -72,69 +75,75 @@ export const Products = () => {
         }
       },
     });
-  };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const handleSubmitEditProduct = async (
-    product: Omit<ProductTypes.Instance, 'id'>
-  ) => {
-    const { data, error } = await updateProduct({
-      ...product,
-      id: productEdit?.id,
-    });
-    if (error)
-      showNotification({
-        message: 'Update product failed!',
-        title: 'Oops!',
-        type: 'error',
+  const handleSubmitEditProduct = useCallback(
+    async (product: Omit<ProductTypes.Instance, 'id'>) => {
+      const { data, error } = await updateProduct({
+        ...product,
+        id: productEdit?.id,
       });
-    else if (data) {
-      setProductData((prev) => {
-        if (prev) {
-          return prev.map((item) => {
-            if (item.id === productEdit?.id) {
-              return data;
-            }
-            return item;
-          });
-        }
-      });
-      showNotification({
-        message: 'Update product successfully!',
-        title: 'Success!',
-        type: 'success',
-      });
-    }
-    closeForm();
-  };
+      if (error)
+        showNotification({
+          message: 'Update product failed!',
+          title: 'Oops!',
+          type: 'error',
+        });
+      else if (data) {
+        setProductData((prev) => {
+          if (prev) {
+            return prev.map((item) => {
+              if (item.id === productEdit?.id) {
+                return data;
+              }
+              return item;
+            });
+          }
+        });
+        showNotification({
+          message: 'Update product successfully!',
+          title: 'Success!',
+          type: 'success',
+        });
+      }
+      closeForm();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [productEdit]
+  );
 
-  const handleSubmitCreateProduct = async (
-    product: Omit<ProductTypes.Instance, 'id'>
-  ) => {
-    const { data, error } = await createProduct(product);
-    if (error)
-      showNotification({
-        message: 'Create product failed!',
-        title: 'Oops!',
-        type: 'error',
-      });
-    else if (data) {
-      setProductData((prev) => {
-        if (prev) {
-          return [data, ...prev];
-        }
-      });
-      showNotification({
-        message: 'Create product successfully!',
-        title: 'Success!',
-        type: 'success',
-      });
-    }
-    closeForm();
-  };
+  const handleSubmitCreateProduct = useCallback(
+    async (product: Omit<ProductTypes.Instance, 'id'>) => {
+      const { data, error } = await createProduct(product);
+      if (error)
+        showNotification({
+          message: 'Create product failed!',
+          title: 'Oops!',
+          type: 'error',
+        });
+      else if (data) {
+        setProductData((prev) => {
+          if (prev) {
+            return [data, ...prev];
+          }
+        });
+        showNotification({
+          message: 'Create product successfully!',
+          title: 'Success!',
+          type: 'success',
+        });
+      }
+      closeForm();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
 
-  const handleSubmitForm = productEdit
-    ? handleSubmitEditProduct
-    : handleSubmitCreateProduct;
+  const handleSubmitForm = useMemo(
+    () => (productEdit ? handleSubmitEditProduct : handleSubmitCreateProduct),
+    [handleSubmitCreateProduct, handleSubmitEditProduct, productEdit]
+  );
 
   useEffect(() => {
     featchProducts().then(({ data, error }) => {

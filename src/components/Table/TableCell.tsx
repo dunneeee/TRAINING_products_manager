@@ -1,10 +1,19 @@
 import clsx from 'clsx';
 
-type TableCell = React.HTMLAttributes<HTMLTableCellElement>;
+type TableCell = React.HTMLAttributes<HTMLTableCellElement> & {
+  truncate?: boolean;
+};
 
-export const TableCell = ({ className, ...props }: TableCell) => {
+export const TableCell = ({ className, truncate, ...props }: TableCell) => {
   return (
-    <td className={clsx('whitespace-nowrap px-6 py-3', className)} {...props}>
+    <td
+      className={clsx(
+        'max-w-xs text-ellipsis px-6 py-3',
+        truncate && 'truncate',
+        className
+      )}
+      {...props}
+    >
       {props.children}
     </td>
   );

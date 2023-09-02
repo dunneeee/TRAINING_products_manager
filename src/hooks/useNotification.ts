@@ -1,5 +1,6 @@
-import { Notification, NotificationProps } from '@/components';
 import { useState } from 'react';
+
+import { Notification, NotificationProps } from '@/components';
 
 const useNotification = () => {
   const [notiProps, setNotiProps] = useState<NotificationProps>();

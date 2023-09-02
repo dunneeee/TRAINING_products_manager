@@ -1,5 +1,6 @@
-import { ProductTypes } from '@/types';
 import { useEffect, useState } from 'react';
+
+import { ProductTypes } from '@/types';
 
 const useSearch = () => {
   const [originalData, setOriginalData] = useState<ProductTypes.Instance[]>([]);

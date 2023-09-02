@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import { useMemo } from 'react';
+import clsx from 'clsx';
 
 const TYPES = {
   available: 'border-green text-green',

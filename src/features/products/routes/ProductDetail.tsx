@@ -1,13 +1,13 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { getProduct } from '../api';
-import { useApi, useGlobalNotification } from '@/hooks';
 import { useEffect } from 'react';
-import { Spinner } from '@/components/Elements/Spinner';
-import { ProductForm } from '../components';
-import { Button } from '@/components';
-import { NotFound } from '@/features/base';
+
 import { ProductTypes } from '@/types';
-import { useUpdateProduct } from '../api/';
+import { NotFound } from '@/features/base';
+import { Spinner, Button } from '@/components/';
+import { useApi, useGlobalNotification } from '@/hooks';
+
+import { ProductForm } from '../components';
+import { useUpdateProduct, getProduct } from '../api/';
 
 export const ProductDetail = () => {
   const { showNotification, hiddenNotification } = useGlobalNotification();
@@ -67,8 +67,10 @@ export const ProductDetail = () => {
 
   return (
     <section className="wrapper flex h-screen w-full flex-wrap items-center justify-center">
-      <div className="mx-auto flex flex-wrap items-center justify-between">
-        <h1 className="mb-4 w-full text-5xl font-bold">{data?.name}</h1>
+      <div className="mx-auto flex flex-wrap items-center justify-between overflow-hidden">
+        <h1 className="mb-4 w-full overflow-hidden text-ellipsis text-5xl font-bold">
+          {data?.name}
+        </h1>
         <div className="w-1/2 max-w-md">
           <ProductForm
             product={data}

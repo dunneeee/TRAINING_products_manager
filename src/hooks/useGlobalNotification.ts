@@ -1,5 +1,6 @@
-import { NotifiContext } from '@/providers';
 import { useContext } from 'react';
+
+import { NotifiContext } from '@/providers';
 
 const useGlobalNotification = () => {
   const context = useContext(NotifiContext);

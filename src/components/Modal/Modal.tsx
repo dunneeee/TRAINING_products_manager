@@ -1,8 +1,9 @@
 import clsx from 'clsx';
-import { ModalContext } from './ModalContext';
-import { ModalHeader } from './ModalHeader';
+
 import { ModalBody } from './ModalBody';
 import { ModalFooter } from './ModalFooter';
+import { ModalHeader } from './ModalHeader';
+import { ModalContext } from './ModalContext';
 
 const SIZES = {
   sm: 'max-w-sm',

@@ -1,10 +1,11 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
-console.log(import.meta.env.ENVIRONMENT);
+// console.log(import.meta.env.ENVIRONMENT);
 
 // change baseURL to localhost:3000 for local development
 const axiosParams = {
   baseURL: 'https://64f04ab68a8b66ecf7796818.mockapi.io/api/',
+  // baseURL: 'http://localhost:3000/',
 };
 
 const axiosInstance: AxiosInstance = axios.create(axiosParams);

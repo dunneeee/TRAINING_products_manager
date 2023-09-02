@@ -1,6 +1,7 @@
 import clsx from 'clsx';
-import { useModalContext } from './ModalContext';
+
 import { Icons } from '@/constants';
+import { useModalContext } from './ModalContext';
 
 type ModalHeaderProps = React.HTMLAttributes<HTMLDivElement> & {
   divider?: boolean;

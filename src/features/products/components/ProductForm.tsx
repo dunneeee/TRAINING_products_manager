@@ -1,8 +1,10 @@
-import { FieldInput, FieldSelect } from '@/components';
-import { useFormValidator } from '@/hooks';
-import { ProductTypes } from '@/types';
-import { validateFormRules } from '../helppers';
 import { useEffect } from 'react';
+
+import { ProductTypes } from '@/types';
+import { useFormValidator } from '@/hooks';
+import { FieldInput, FieldSelect } from '@/components';
+
+import { validateFormRules } from '../helppers';
 
 type ProdcutFormProps = React.HTMLAttributes<HTMLFormElement> & {
   product?: ProductTypes.Instance;

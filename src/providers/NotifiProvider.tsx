@@ -1,6 +1,7 @@
-import { NotificationProps } from '@/components';
-import { useNotification } from '@/hooks';
 import { createContext } from 'react';
+
+import { useNotification } from '@/hooks';
+import { NotificationProps } from '@/components';
 
 type NotifiContextType = {
   showNotification: (props: Omit<NotificationProps, 'show'>) => void;

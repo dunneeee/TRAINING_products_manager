@@ -1,5 +1,6 @@
-import { ApiStatus, IDLE, defaultApiStatuses } from '@/constants';
 import { useMemo, useState } from 'react';
+
+import { ApiStatus, IDLE, defaultApiStatuses } from '@/constants';
 
 type Statuses = Record<`is${Capitalize<Lowercase<ApiStatus>>}`, boolean>;
 
